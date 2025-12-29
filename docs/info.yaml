@@ -1,0 +1,23 @@
+project:
+  title: "8-bit Register with Enable"
+  description: "An 8-bit synchronous register with reset and enable, integrated in Caravel for Google Open MPW."
+  author: "Khushal Bhoir"
+  github: "https://github.com/khushalbhoir5-star/caravel_user_project"
+  license: "Apache-2.0"
+
+clock:
+  frequency: 100000000   # 100 MHz
+  port: wb_clk_i
+
+interfaces:
+  - name: gpio
+    description: "Uses io_in for inputs and io_out for outputs"
+
+outputs:
+  - q[7:0]
+
+inputs:
+  - clk
+  - reset
+  - enable
+  - d[7:0]
